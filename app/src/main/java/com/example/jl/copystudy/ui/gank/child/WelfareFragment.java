@@ -150,7 +150,8 @@ public class WelfareFragment extends BaseFragment<FragmentWelfareBinding> {
 
             @Override
             public void onClick(GankIoDataBean.ResultsBean resultsBean, int position) {
-                //跳转到查看大图activity
+                //跳转到查看大图activity图片
+
             }
         });
 
