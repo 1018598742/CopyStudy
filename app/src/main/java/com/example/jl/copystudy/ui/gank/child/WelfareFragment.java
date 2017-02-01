@@ -1,5 +1,6 @@
 package com.example.jl.copystudy.ui.gank.child;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -15,10 +16,10 @@ import com.example.jl.copystudy.http.HttpUtils;
 import com.example.jl.copystudy.http.RequestImpl;
 import com.example.jl.copystudy.http.cache.ACache;
 import com.example.jl.copystudy.model.GankOtherModel;
+import com.example.jl.copystudy.view.viewbigimage.ViewBigImageActivity;
 import com.example.xrecyclerview.XRecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import rx.Subscription;
 
@@ -34,7 +35,7 @@ public class WelfareFragment extends BaseFragment<FragmentWelfareBinding> {
     private boolean isFirst = true;
     private int mPage = 1;
     private GankIoDataBean meiziBean;
-    private List<String> imgList = new ArrayList<>();
+    private ArrayList<String> imgList = new ArrayList<>();
 
     @Override
     public int setContent() {
@@ -151,6 +152,13 @@ public class WelfareFragment extends BaseFragment<FragmentWelfareBinding> {
             @Override
             public void onClick(GankIoDataBean.ResultsBean resultsBean, int position) {
                 //跳转到查看大图activity图片
+                Bundle bundle = new Bundle();
+                bundle.putInt("selet",2);//2：大图显示当前页数。1：头像，不显示页数。
+                bundle.putInt("code",position);//第几张
+                bundle.putStringArrayList("imageuri",imgList);
+                Intent intent = new Intent(getContext(), ViewBigImageActivity.class);
+                intent.putExtras(bundle);
+                getContext().startActivity(intent);
 
             }
         });
