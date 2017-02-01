@@ -236,7 +236,7 @@ public class WebViewActivity extends AppCompatActivity implements IWebPageView {
     }
 
     @Override
-    public void hideViderFullView() {
+    public void hideVideoFullView() {
 
     }
 }

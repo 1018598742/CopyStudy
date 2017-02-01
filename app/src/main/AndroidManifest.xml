@@ -37,7 +37,8 @@
         <activity android:name=".ui.menu.NavDownloadActivity" />
         <activity android:name=".ui.menu.NavDeedBackActivity" />
         <activity android:name=".ui.menu.NavAboutActivity" />
-        <activity android:name=".view.webview.WebViewActivity"></activity>
+        <activity android:name=".view.webview.WebViewActivity" />
+        <activity android:name=".view.webview.OneWebViewActivity"></activity>
     </application>
 
 </manifest>

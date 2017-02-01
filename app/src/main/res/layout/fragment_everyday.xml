@@ -5,7 +5,7 @@
 
         <variable
             name="gankBean"
-            type="com.example.jl.copystudy.bean.GankIoDataBean" />
+            type="com.example.jl.copystudy.bean.GankIoDayBean" />
     </data>
 
     <RelativeLayout

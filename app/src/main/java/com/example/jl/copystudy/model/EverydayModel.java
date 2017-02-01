@@ -2,7 +2,7 @@ package com.example.jl.copystudy.model;
 
 import com.example.jl.copystudy.bean.AndroidBean;
 import com.example.jl.copystudy.bean.FrontpageBean;
-import com.example.jl.copystudy.bean.GankIoDataBean;
+import com.example.jl.copystudy.bean.GankIoDayBean;
 import com.example.jl.copystudy.http.HttpUtils;
 
 import java.util.ArrayList;
@@ -14,6 +14,8 @@ import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
+
+//import com.example.jl.copystudy.bean.GankIoDataBean;
 
 /**
  * Created by Administrator on 2017/1/20.
@@ -70,12 +72,12 @@ public class EverydayModel {
     private List<List<AndroidBean>> lists;
 
     public void showRecyclerViewData(final HomeImpl listener) {
-        Func1<GankIoDataBean, Observable<List<List<AndroidBean>>>> func1 = new Func1<GankIoDataBean, Observable<List<List<AndroidBean>>>>() {
+        Func1<GankIoDayBean, Observable<List<List<AndroidBean>>>> func1 = new Func1<GankIoDayBean, Observable<List<List<AndroidBean>>>>() {
             @Override
-            public Observable<List<List<AndroidBean>>> call(GankIoDataBean gankIoDataBean) {
+            public Observable<List<List<AndroidBean>>> call(GankIoDayBean gankIoDataBean) {
                 lists = new ArrayList<>();
 
-                GankIoDataBean.ResultsBean results = gankIoDataBean.getResults();
+                GankIoDayBean.ResultsBean results = gankIoDataBean.getResults();
                 if (results.getAndroid() != null && results.getAndroid().size() > 0) {
                     addList(results.getAndroid(), "Android");
                 }

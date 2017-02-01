@@ -47,6 +47,10 @@ public class HttpUtils {
 
     private Gson gson;
 
+    public static int per_page = 10;
+    public static int per_page_more = 20;
+
+
     public void setContext(Context context) {
         this.context = context;
     }

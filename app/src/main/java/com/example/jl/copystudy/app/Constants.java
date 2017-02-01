@@ -9,4 +9,6 @@ public class Constants {
     public static String BANNER_PIC = "banner_pic";
     //保存每日推荐recyclerview内容
     public static String EVERYDAY_CONTENT = "everyday_content";
+    // 缓存妹子
+    public static String GANK_MEIZI = "gank_meizi";
 }
